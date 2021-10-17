@@ -1,0 +1,36 @@
+pip3 install --upgrade pip
+
+
+pip3 install pandas
+
+
+pip3 install tensorflow
+
+
+pip3 install keras
+
+pip3 install -U scikit-learn
+pip3 install opencv-python
+---
+sudo apt-get install tesseract-ocr
+pip3 install pytesseract
+Mounting directory:
+https://github.com/GoogleCloudPlatform/gcsfuse/blob/master/docs/installing.md
+Run in box
+export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`
+echo "deb http://packages.cloud.google.com/apt $GCSFUSE_REPO main" | sudo tee /etc/apt/sources.list.d/gcsfuse.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install gcsfuse
+sudo usermod -a -G fuse $USER
+exit
+
+
+
+---To mount
+gcsfuse --implicit-dirs palosanto photos3/
+
+
+
+--- set up gnome  GUI
+https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781788474221/1/ch01lvl1sec15/installing-and-configuring-ubuntu-desktop-for-google-cloud-platform
